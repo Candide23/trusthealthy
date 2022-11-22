@@ -51,6 +51,14 @@ public class Patient {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public List<ClinicalData> getClinicalData() {
+        return clinicalData;
+    }
+
+    public void setClinicalData(List<ClinicalData> clinicalData) {
+        this.clinicalData = clinicalData;
+    }
 }
 
 

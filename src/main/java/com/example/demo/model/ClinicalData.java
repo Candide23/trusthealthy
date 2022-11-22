@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 
@@ -12,10 +14,15 @@ public class ClinicalData {
     private int id;
     private String Name;
     private String value;
-    private Timestamp measureDateTime;
+    private Timestamp measuredDateTime;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="patient_id", nullable = false)
+    // We will add JsonIgnore otherwise it will go into that
+    // infinite loop because patient what ever we are returning from the patient
+    // controller when we return the patient, the patient has the clinical data
+    // which is a list
+    @JsonIgnore
     private Patient patient;
 
     public int getId() {
@@ -42,12 +49,12 @@ public class ClinicalData {
         this.value = value;
     }
 
-    public Timestamp getMeasureDateTime() {
-        return measureDateTime;
+    public Timestamp getMeasuredDateTime() {
+        return measuredDateTime;
     }
 
-    public void setMeasureDateTime(Timestamp measureDateTime) {
-        this.measureDateTime = measureDateTime;
+    public void setMeasuredDateTime(Timestamp measuredDateTime) {
+        this.measuredDateTime = measuredDateTime;
     }
 
     public Patient getPatient() {
