@@ -1,4 +1,4 @@
-# trusthealthy
+# Trusthealthy
 
 Trusthealthy is an application which allows the user to view all the patient records, to register a new patient, to enter clinical data for a pateint, to analyze and see a report of the latest tests
 
