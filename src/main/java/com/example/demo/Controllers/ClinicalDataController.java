@@ -15,6 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin
 public class ClinicalDataController {
 
     @Autowired
@@ -36,6 +37,7 @@ public class ClinicalDataController {
         ClinicalData clinicalData = new ClinicalData();
         clinicalData.setName(request.getName());
         clinicalData.setValue(request.getValue());
+        clinicalData.setMeasuredDateTime(request.getMeasuredDateTime());
         clinicalData.setPatient(patient);
         return clinicalDataRepository.save(clinicalData);
     }

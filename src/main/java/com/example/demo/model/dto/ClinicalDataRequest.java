@@ -1,10 +1,14 @@
 package com.example.demo.model.dto;
 
+import java.sql.Timestamp;
+
 public class ClinicalDataRequest {
 
     private String name;
     private String value;
     private int patientId;
+    private Timestamp measuredDateTime;
+
 
     public String getName() {
         return name;
@@ -28,5 +32,13 @@ public class ClinicalDataRequest {
 
     public void setPatientId(int patientId) {
         this.patientId = patientId;
+    }
+
+    public Timestamp getMeasuredDateTime() {
+        return measuredDateTime;
+    }
+
+    public void setMeasuredDateTime(Timestamp measuredDateTime) {
+        this.measuredDateTime = measuredDateTime;
     }
 }

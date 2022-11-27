@@ -9,5 +9,4 @@ import java.util.List;
 @Repository
 public interface PatientRepository extends JpaRepository<Patient, Integer> {
 
-    List<Patient> findByFirstNameContainingOrLastNameContaining(String firstName, String lastName);
 }
