@@ -17,7 +17,7 @@ export default function CollectClinicals() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8081/trusthealthy/api/patients/${patientId}`)
+      .get(`http://trusthealthy.us-east-1.elasticbeanstalk.com/trusthealthy/api/patients/${patientId}`)
       .then((res) => {
         setPatientData(res.data);
         setLoading(false);
@@ -32,7 +32,7 @@ export default function CollectClinicals() {
       value,
     };
 
-    axios.post('http://localhost:8081/trusthealthy/api/clinicals/', data).then(() => {
+    axios.post('http://trusthealthy.us-east-1.elasticbeanstalk.com/trusthealthy/api/clinicals/', data).then(() => {
       toast('Patient data added successfully');
     });
   };

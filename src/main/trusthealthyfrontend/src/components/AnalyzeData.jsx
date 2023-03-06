@@ -11,7 +11,7 @@ export default function AnalyzeData() {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get(`http://localhost:8081/trusthealthy/api/patients/analyze/${patientId}`)
+    axios.get(`http://trusthealthy.us-east-1.elasticbeanstalk.com/trusthealthy/api/patients/analyze/${patientId}`)
       .then(res => {
         setData(res.data);
         setLoading(false);

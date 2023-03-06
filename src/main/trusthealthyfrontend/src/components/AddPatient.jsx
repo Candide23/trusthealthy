@@ -24,7 +24,7 @@ event.preventDefault();
         measuredDateTime:measuredDateTime
     }
 
-      axios.post('http://localhost:8081/trusthealthy/api/patients/',data).then(res=>{
+      axios.post('http://trusthealthy.us-east-1.elasticbeanstalk.com/trusthealthy/api/patients/',data).then(res=>{
         toast("Patient added successfully");
         setLoading(false);
     })
