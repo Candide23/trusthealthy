@@ -9,7 +9,7 @@ export default function Home() {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get("http://trusthealthy.us-east-1.elasticbeanstalk.com/trusthealthy/api/patients").then((res) => {
+    axios.get("http://trusthealthyapp.us-east-2.elasticbeanstalk.com/trusthealthy/api/patients").then((res) => {
       setPatientData(res.data);
       setLoading(false);
     });

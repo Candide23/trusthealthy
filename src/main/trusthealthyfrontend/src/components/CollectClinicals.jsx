@@ -17,7 +17,7 @@ export default function CollectClinicals() {
 
   useEffect(() => {
     axios
-      .get(`http://trusthealthy.us-east-1.elasticbeanstalk.com/trusthealthy/api/patients/${patientId}`)
+      .get(`http://trusthealthyapp.us-east-2.elasticbeanstalk.com/trusthealthy/api/patients/${patientId}`)
       .then((res) => {
         setPatientData(res.data);
         setLoading(false);
